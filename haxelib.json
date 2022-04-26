@@ -1,0 +1,11 @@
+{
+	"name": "RUDP-FL",
+	"url" : "https://github.com/Dimensionscape/RUDP-FL",
+	"license": "MIT",
+	"tags": ["udp", "datagram", "socket", "network", "net", "server", "network","openfl", "lime", "rudp"],
+    "description": "RUDP-FL is a custom reliable UDP implementation for Haxe and OpenFL 9.1+.",
+	"version": "1.0.0-alpha",
+	"classPath": "src/",
+	"releasenote": "Initial alpha release.",
+	"contributors": [ "Dimensionscape" ]
+}
