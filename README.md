@@ -1,2 +1,2 @@
 # RUDP-FL
- RUDP-FL is a reliable UDP implementation for OpenFL.
+ RUDP-FL is a custom reliable UDP implementation for Haxe and OpenFL.
