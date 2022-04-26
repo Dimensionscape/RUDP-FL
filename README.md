@@ -24,3 +24,8 @@ RUDP is perfect for developing reliable and scalable P2P applications with OpenF
 - Haxe 4+
 - OpenFL 9.1+
 - Lime 7.9+
+
+# TODO
+- Reduce header size to 72 bits
+- Documentation
+- Examples
