@@ -17,3 +17,10 @@ Reliable UDP is a custom protocol on top of DatagramSocket(UDP) that provides so
 ----------------------
 
 RUDP is perfect for developing reliable and scalable P2P applications with OpenFL, allowing you to guarantee data transmission with low latency.
+
+---------------------
+
+# Requirements
+- Haxe 4+
+- OpenFL 9.1+
+- Lime 7.9+
