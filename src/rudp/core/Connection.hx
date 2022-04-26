@@ -164,20 +164,7 @@ class Connection
 
 	private function _send(data:ByteArray, frameType:FrameType = PACKET, resend:Bool = false):Void
 	{
-		//|````````|```````````````|```````````````|````````````````````````````````````````````````````````````|``````````````````````````````|
-		//| 1 byte |   2 bytes     |   2 bytes     |                            8 bytes                         |           4 bytes            |
-		//|_resend_|_protocol_ver__|__frame_type___|____________________________sequence________________________|_________data_length__________|
-		//|                                                                                                                                    |
-		//|                                                                                                                                    |
-		//|                                                                                                                                    |
-		//|                                                                                                                                    |
-		//|                                                         0 - 4096 bytes                                                             |
-		//|                                                                                                                                    |
-		//|                                                                                                                                    |
-		//|                                                                                                                                    |
-		//|                                                                                                                                    |
-		//|                                                                                                                                    |
-		//|__________________________________________________________packet_data_______________________________________________________________|
+		//TODO: Further reduce header size
 		
 		
 		var frame:ByteArray = null;
