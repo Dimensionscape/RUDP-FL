@@ -7,13 +7,15 @@ Reliable UDP is a custom protocol on top of DatagramSocket(UDP) that provides so
 
 ### UDP 
 - Fast packet transmission.
-- NAT Hole punching(https://en.wikipedia.org/wiki/UDP_hole_punching)
+- NAT hole punching(https://en.wikipedia.org/wiki/UDP_hole_punching)
 - Low latency
+- Small packet overhead
 
 ### TCP
 - Reliable packet delivery
 - Persistant connections
-
+- Packet ordering
+- Packet splitting
 ----------------------
 
 RUDP is perfect for developing reliable and scalable P2P applications with OpenFL, allowing you to guarantee data transmission with low latency.
