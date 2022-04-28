@@ -22,7 +22,7 @@ class Connection
 	private static inline var KEEP_ALIVE:Int = 75000;
 	private static inline var DELIVERY_WINDOW:Int = 500;
 	private static inline var CONNECTION_ATTEMPT_DELTA:Int = 3000;
-	private static inline var MAX_DATA_SIZE = 4000;
+	private static inline var MAX_DATA_SIZE = 4096;
 	
 	public var ip(get, null):String;
 	public var port(get, null):Int;
@@ -164,7 +164,21 @@ class Connection
 
 	private function _send(data:ByteArray, frameType:FrameType = PACKET, resend:Bool = false):Void
 	{
-		//TODO: Further reduce header size
+		//TODO: Reduce header to 56 bits as shown
+		//|````````|```````````````|```````````````|````````|````````````````````````````````````````|``````````````````````````````|
+		//| 1 bit  |   3 bits      |   3 bits      |  1 bit |                 32 bits                |           16 bits            |
+		//|_resend_|_protocol_ver__|__frame_type___|________|________________sequence________________|_________data_length__________|
+		//|                                                                                                                         |
+		//|                                                                                                                         |
+		//|                                                                                                                         |
+		//|                                                                                                                         |
+		//|                                                      0 - 4096 bytes                                                     |
+		//|                                                                                                                         |
+		//|                                                                                                                         |
+		//|                                                                                                                         |
+		//|                                                                                                                         |
+		//|                                                                                                                         |
+		//|______________________________________________________packet_data________________________________________________________|
 		
 		
 		var frame:ByteArray = null;
